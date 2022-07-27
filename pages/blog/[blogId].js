@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import {useRouter} from "next/router";
 
 export default function lbogId() {
+    const router= useRouter();
   return (
     <div>
-      <h1>This is dynamic route <br/> By using square bracket</h1>
+      <h1>This is dynamic route <br/> By using square bracket {router?.query?.blogId}</h1>
     </div>
   )
 }

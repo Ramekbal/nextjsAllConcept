@@ -1,6 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-export default function postDetails({postDatails}) {
+import { useRouter } from 'next/router';
+
+export default function PostDetails({postDatails}) {
+    const router = useRouter();
+    // console.log("router", router);
+    if(router.isFallback){
+        return <h1>Loading...</h1>
+    }
   return (
     <div>
       <h1> {postDatails.id}{postDatails.title}</h1>
@@ -9,28 +16,28 @@ export default function postDetails({postDatails}) {
 }
 
 export async function getStaticPaths(context) {
-    const postDatas = await fetch(
-        "https://jsonplaceholder.typicode.com/posts"
-      ).then((data) => data.json());
-      const paths = postDatas.map((post)=>{
-        return {
-            params:{postId:`${post.id}`}
-        }
-      })
+    // const postDatas = await fetch(
+    //     "https://jsonplaceholder.typicode.com/posts"
+    //   ).then((data) => data.json());
+    //   const paths = postDatas.map((post)=>{
+    //     return {
+    //         params:{postId:`${post.id}`}
+    //     }
+    //   })
     return {
-    //   paths: [
-    //     {
-    //       params: { postId: "1" },
-    //     },
-    //     {
-    //       params: { postId: "2" },
-    //     },
-    //     {
-    //       params: { postId: "3" },
-    //     },
-    //   ],
-    paths,
-      fallback:false
+      paths: [
+        {
+          params: { postId: "1" },
+        },
+        {
+          params: { postId: "2" },
+        },
+        {
+          params: { postId: "3" },
+        },
+      ],
+    // paths,
+      fallback:true // if false 
     };
   }
 

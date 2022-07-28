@@ -25,7 +25,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      postDatas: postDatas
+      postDatas: postDatas.splice(0, 3)
     },
   };
 }

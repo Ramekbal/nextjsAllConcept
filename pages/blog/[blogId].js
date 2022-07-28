@@ -1,7 +1,7 @@
 import React from 'react';
 import {useRouter} from "next/router";
 
-export default function lbogId() {
+export default function BlogId() {
     const router= useRouter();
   return (
     <div>

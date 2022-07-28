@@ -6,4 +6,6 @@ Next js:- pages are pre rendred html is already generated with the necessery dat
 Why pre redering:- 1> Improve performance 
 
 generating html after fatching som data.
+
+For now command is npm buid/ yar nuild
 */

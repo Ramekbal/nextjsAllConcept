@@ -1,14 +1,16 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import User from './../component/user';
 
 export default function users({datas}) {
   return (
     <div>
         {datas.map((data, index)=>{
             return(
-                <Fragment key={data.id}>{data.name}<br/></Fragment> 
+                <div key={data.id}>
+                <User userdata={data}></User>
+                </div> 
             )
         })}
-      <>Hi this is tag</>
     </div>
   )
 }

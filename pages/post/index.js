@@ -25,7 +25,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      postDatas: postDatas.slice(0, 4),
+      postDatas: postDatas
     },
   };
 }

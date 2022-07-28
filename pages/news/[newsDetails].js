@@ -10,7 +10,7 @@ export default function NewsDetails({postDatas}) {
 }
 
 export async function getServerSideProps(context){
-    const {params:{newsDetails}, req, res}= context
+    const {params:{newsDetails}, req, res, query}= context
     console.log("====", req.headers.cookie)
     res.setHeader('Set-Cookie', ['name=vishawas']);
     const postDatas = await fetch(

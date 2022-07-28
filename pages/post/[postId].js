@@ -37,7 +37,7 @@ export async function getStaticPaths(context) {
         },
       ],
     // paths,
-      fallback:true // if false 
+      fallback:true // if false / true/ block
     };
   }
 

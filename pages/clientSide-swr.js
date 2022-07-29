@@ -7,7 +7,6 @@ const fetcher = async ()=>{
 
 export default function ClientSideData() {
  const {data, error}= useSWR('client', fetcher);
- console.log("data", data);
  if(error) return "Error occured";
  if(!data) return "Loading"
  return (

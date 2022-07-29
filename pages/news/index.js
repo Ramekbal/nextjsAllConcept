@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import Link from "next/link";
 
 export default function News({postDatas}) {
-    // console.log("postDatas", postDatas)
   return (
     <div>
         {postDatas.map((data)=>{

@@ -16,7 +16,6 @@ export default function users({datas}) {
 }
 export async function getStaticProps() {
     const fetchData = await fetch('https://jsonplaceholder.typicode.com/users').then((res)=> res.json());
-    console.log("fetchData", fetchData);
     return {
         props:{
             datas:fetchData

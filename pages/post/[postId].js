@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 
 export default function PostDetails({postDatails}) {
     const router = useRouter();
-    // console.log("router", router);
     if(router.isFallback){
         return <h1>Loading...</h1>
     }
